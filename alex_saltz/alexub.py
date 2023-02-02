@@ -7,45 +7,9 @@ ub = Client("my_account",
               api_id = config.api_id,
               api_hash = config.api_hash
             )
-"""@ub.on_message(filters.private)
-async def hello(client, message):
-    try:
-        username = message.from_user.username 
-        botval = username[-3]+username[-2]+username[-1]
-    except:
-        username = None
-        botval = None
-        
-    user = message.from_user.first_name
-    if username == "FineContactBot":
-        print("@FineContactBot")
-    elif username == "Horrordude":
-        print("you")
-    elif botval == "bot" or botval == "Bot":
-        print(username)
-    else:
-       await message.reply(f" Hello {user} ! \n Please Contact Me through : @FineContactBot")
-      # await message.forward(Group_id)
-       mes = message
-      # await ub.delete_messages(message.chat.id, message.id)
-"""
-tri = -1001682844722
-gameun = "chtwrsbot"
-idlecity = "idle_city_bot"
-"""@ub.on_message(filters.chat(idlecity))
-def check(ub,message):
-    try: 
-        
-        text = message.text
-        target = "🎣 Fishing 🎣"
-        if target in text :
-            print("before")
-            message.click(0)
-            print("after")
-    except :
-        print(TypeError)
 
-"""        
+gameun = "chtwrsbot"
+squad = -1001795432674
 async def Doquest(ub,message):
     try: 
         time.sleep(2)
@@ -92,38 +56,24 @@ async def check(ub,message):
         elif sendMe in message.text:
             time.sleep(2)
             await ub.send_message(message.chat.id,"🏅Me")
+            
+        
+        print("over")
     except Exception as e:
         print(e)
 
 
-@ub.on_message(filters.chat(config.Entertainment_chat))
-async def forwardmsg(ub,message):
-    target = "@Horrordude"
-    
-    if target in message.text:
-        user = message.from_user.mention()
-        await  message.reply(f"ehhh. . .  Hi  {user} 👀 ") 
-        
-        
+@ub.on_message(filters.chat(squad))
+def order(ub,message):
+    try:
+            if message.from_user.username == "Fine_guy_21":#moonorderbot":
+                mes = message.text 
+                ub.send_message(408101137,"/effects")
+
+    except Exception as e:
+        print(e)    
 
 
 print("Userbot is running" )
 ub.run()
-
-
-"""
-🌲Forest 3min
-Many things can happen in the forest.
-
-🍄Swamp 4min
-Who knows what is lurking in mud.
-
-🏔Mountain Valley 4min
-Watch out for landslides.
-
-🗡Foray 🔋🔋
-Foray is a dangerous activity. Someone can notice you and may beat you up. But if you go unnoticed, you will acquire a lot of loot.
-
-📯Arena 
-Arena isn't a place for the weak. Here you fight against other players and if you stand victorious, you acquire precious experience.
-"""
+print("go")
