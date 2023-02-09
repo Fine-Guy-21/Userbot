@@ -5,3 +5,8 @@ alex_saltz/my_account.session
 alex_saltz/my_account.session-journal
 Horrordude/__pycache__/config.cpython-311.pyc
 Horrordude/my_account.session
+*.pyc
+*.session
+*.session-journal
+Eyuti/config.py
+Prince Fine/config.py
